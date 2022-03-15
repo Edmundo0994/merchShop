@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const DotenvWebpackPlugin = require("dotenv-webpack");
 const webpack = require("webpack");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   entry: "./src/index.js",
@@ -52,6 +53,12 @@ module.exports = {
       filename: "assests/[name].css",
     }),
     new DotenvWebpackPlugin({
+      path: "./.env",
+      safe: true,
+      systemvars: true,
+      defaults: false,
+    }),
+    new Dotenv({
       path: "./.env",
       safe: true,
       systemvars: true,
