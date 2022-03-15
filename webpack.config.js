@@ -52,7 +52,7 @@ module.exports = {
       filename: "assests/[name].css",
     }),
     new DotenvWebpackPlugin({
-      path: "./.env",
+      path: path.resolve(__dirname, "./.env"),
       safe: true,
       systemvars: true,
       defaults: false,
