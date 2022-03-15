@@ -8,7 +8,6 @@ export default function Success() {
   const { state } = useContext(AppContext);
   const { buyer } = state;
   const location = useGoogleAddress(buyer.address);
-  console.log(location);
   return (
     <div className="Success">
       <div className="Success-content">
