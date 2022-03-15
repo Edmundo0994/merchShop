@@ -16,6 +16,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           MERCH_APP_CLIENT_ID: ${{ secrets.MERCH_APP_CLIENT_ID }}
           MERCH_APP_DATA_CLIENT_TOKEN: ${{ secrets.MERCH_APP_DATA_CLIENT_TOKEN }}
           MERCH_APP_APIKEY: ${{ secrets.MERCH_APP_APIKEY }}
