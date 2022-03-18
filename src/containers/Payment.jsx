@@ -40,10 +40,10 @@ export default function Payment() {
       <div className="Payment-content">
         <h3>Resument del pedido:</h3>
         {cart.map((item) => (
-          <div key={item.id} className="Checkout-item">
+          <div key={item.uid} className="Checkout-item">
             <div className="Checkout-element">
               <div className="Checkout-detail">
-                <img src={item.image} alt={item.title} />
+                <img src={`http://localhost:1337${item.image.data[0].attributes.url}`} alt={item.title} />
                 <h4>{item.title}</h4>
               </div>
               <span>${item.price}</span>

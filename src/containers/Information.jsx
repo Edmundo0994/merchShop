@@ -101,7 +101,7 @@ export default function Information() {
       <div className="Information-sidebar">
         <h3>Pedido:</h3>
         {cart.map((item) => (
-          <div key={`${item.id}-sidebar`} className="Information-item">
+          <div key={`${item.uid}-sidebar`} className="Information-item">
             <div className="Information-element">
               <h4>{item.title}</h4>
               <span>$ {item.price}</span>

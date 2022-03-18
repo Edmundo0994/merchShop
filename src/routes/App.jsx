@@ -15,6 +15,10 @@ const initialOptions = {
 
 export default function App() {
   const initialState = useInitialState();
+  const isEmpty = Object.keys(initialState.state).length;
+  if (isEmpty <= 0) {
+    return <h1>Loading...</h1>;
+  }
   return (
     <PayPalScriptProvider value={initialOptions}>
       <AppContext.Provider value={initialState}>

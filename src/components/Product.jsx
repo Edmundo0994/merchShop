@@ -1,9 +1,10 @@
 import React from "react";
 
 export default function Product({ product, handleAddToCart }) {
+  // console.log(product.attributes.image.data[0].attributes.url);
   return (
     <div className="Products-item">
-      <img src={product.image} alt={product.title} />
+      <img src={`http://localhost:1337${product.image.data[0].attributes.url}`} alt={product.title} />
       <div className="Products-item-info">
         <h2>
           {product.title}
