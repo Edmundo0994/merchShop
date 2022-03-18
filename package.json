@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --mode development",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production --stats-children",
     "format": "prettier --write \"{*.js,src/**/*.{js,jsx}}\"",
     "lint": "eslint src/ --fix"
   },
@@ -33,6 +33,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "babel-loader": "^8.2.3",
+    "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.7.1",
     "dotenv-webpack": "^7.1.0",
     "eslint": "^8.10.0",
